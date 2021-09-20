@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2436968" started-at="2021-09-20T06:55:18Z" finished-at="2021-09-20T07:35:55Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2436968" started-at="2021-09-20T06:55:18Z" finished-at="2021-09-20T07:35:55Z">
+      <class name="fintoo.Testcases.TC_ExpertAdvisory">
+        <test-method status="PASS" signature="start()[pri:0, instance:[TC_ExpertAdvisory passed=0 failed=0 skipped=0]]" name="start" is-config="true" duration-ms="383" started-at="2021-09-20T06:55:18Z" finished-at="2021-09-20T06:55:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="setReport()[pri:0, instance:[TC_ExpertAdvisory passed=0 failed=0 skipped=0]]" name="setReport" is-config="true" duration-ms="50747" started-at="2021-09-20T06:55:18Z" finished-at="2021-09-20T06:56:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setReport -->
+        <test-method status="PASS" signature="expertAdvisory()[pri:0, instance:[TC_ExpertAdvisory passed=0 failed=0 skipped=0]]" name="expertAdvisory" duration-ms="2386163" started-at="2021-09-20T06:56:09Z" finished-at="2021-09-20T07:35:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- expertAdvisory -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:[TC_ExpertAdvisory passed=0 failed=0 skipped=0]]" name="tearDown" is-config="true" duration-ms="21" started-at="2021-09-20T07:35:55Z" finished-at="2021-09-20T07:35:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=expertAdvisory on [TC_ExpertAdvisory passed=0 failed=0 skipped=0] status=SUCCESS method=TC_ExpertAdvisory.expertAdvisory()[pri:0, instance:[TC_ExpertAdvisory passed=0 failed=0 skipped=0]] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="close()[pri:0, instance:[TC_ExpertAdvisory passed=0 failed=0 skipped=0]]" name="close" is-config="true" duration-ms="1" started-at="2021-09-20T07:35:55Z" finished-at="2021-09-20T07:35:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="down()[pri:0, instance:[TC_ExpertAdvisory passed=0 failed=0 skipped=0]]" name="down" is-config="true" duration-ms="520" started-at="2021-09-20T07:35:55Z" finished-at="2021-09-20T07:35:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- down -->
+      </class> <!-- fintoo.Testcases.TC_ExpertAdvisory -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

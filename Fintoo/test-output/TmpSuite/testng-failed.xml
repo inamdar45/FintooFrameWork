@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TmpSuite]">
+  <test thread-count="5" name="TmpTest(failed)">
+    <classes>
+      <class name="fintoo.Testcases.TC_DataGathering_008">
+        <methods>
+          <include name="alternativePositive"/>
+          <include name="goldPositive"/>
+          <include name="liabilitiesPositive"/>
+          <include name="setReport"/>
+          <include name="close"/>
+          <include name="tearDown"/>
+          <include name="down"/>
+          <include name="liquidPositive"/>
+          <include name="othersAssetPositive"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- fintoo.Testcases.TC_DataGathering_008 -->
+    </classes>
+  </test> <!-- TmpTest(failed) -->
+</suite> <!-- Failed suite [TmpSuite] -->

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="fintoo.Testcases.TC_DataGathering_008">
+        <methods>
+          <include name="liabilitiesPositive"/>
+          <include name="setReport"/>
+          <include name="assetsEquityPostive"/>
+          <include name="realEstatePositive"/>
+          <include name="myDocumentPositive"/>
+          <include name="tearDown"/>
+          <include name="down"/>
+          <include name="start"/>
+          <include name="alternativePositive"/>
+          <include name="goldPositive"/>
+          <include name="insurancePositive"/>
+          <include name="logOut"/>
+          <include name="close"/>
+          <include name="dataGathering01"/>
+          <include name="loginAndStartPlan"/>
+          <include name="incomeExpensePositive"/>
+          <include name="assetDebtPositive"/>
+          <include name="goalsPositive"/>
+          <include name="liquidPositive"/>
+          <include name="othersAssetPositive"/>
+        </methods>
+      </class> <!-- fintoo.Testcases.TC_DataGathering_008 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
