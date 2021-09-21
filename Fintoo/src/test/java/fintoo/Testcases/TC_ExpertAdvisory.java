@@ -28,8 +28,6 @@ public class TC_ExpertAdvisory extends BaseClass {
 	static int p;
 	@Test
 	public void expertAdvisory() throws IOException, InterruptedException, AWTException {
-		
-		
 		logger = extent.createTest("Login");
  		extentTest.set(logger);
  		String excelPath = readconfig.getExcelPath();
@@ -76,7 +74,7 @@ public class TC_ExpertAdvisory extends BaseClass {
 		fp.genericClick(driver, fp.startButton);
 		logger.pass("Clicked on Start Button");
 		// Fill in your details code
-		Map<String, String> data = fun.getTestDataInMap(excelPath, "FP_Details").get(0);
+		Map<String, String> data = fun.getTestDataInMap(excelPath, "FP_Details").get(p-1);
 		String formName =  data.get("FormName");
 		String formEmailID =  data.get("FormEmailID");
 		String formMobileNum =  data.get("FormMobile");
@@ -160,6 +158,7 @@ public class TC_ExpertAdvisory extends BaseClass {
 		tcDG.generateReport();
 		WebDriverWait wait=new WebDriverWait(driver,15);
 		WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(fp.agreeFPCheckBox));
+		Thread.sleep(5000);
 		element.click();
 		logger.pass("Clicked on CheckBox");
         fp.genericClick(driver, fp.proceedButton);

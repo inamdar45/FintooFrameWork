@@ -2275,14 +2275,16 @@ public void uploadAsset(String documentPath01,String documentPassword01,String S
 
 	
 	@Test(priority=15)
-	public void generateReport() throws IOException {
+	public void generateReport() throws IOException, InterruptedException {
 		String reportGen = fun.getTestDataInMap(excelPath, "Datagathering").get(loginSize).get("GenerateReport");
 		if(reportGen.equals("Yes")){
 		dG.genericClick(driver, dG.generateReportButton);
 		logger.pass("Clicked on Generate Report Button");
 		dG.genericClick(driver, dG.genRepYesBtn);
 		logger.pass("Clicked Generate Report Button");
-		fun.fluentWait(driver, dG.downloadRepBtn,20000,1000);}
+		//fun.fluentWait(driver, dG.downloadRepBtn,20000,1000);
+		Thread.sleep(5000);
+		}
 		
 	}
 	@Test(priority = 16)
