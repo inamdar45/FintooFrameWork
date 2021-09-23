@@ -63,11 +63,13 @@ import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
+import fintoo.Testcases.BaseClass;
 
 
-public class functions {
 
-	public static WebDriver driver;
+public class functions extends BaseClass{
+
+	//public static WebDriver driver;
 	public ArrayList<String> tabs;
 	String otp;
 	
@@ -223,6 +225,15 @@ public class functions {
     	 return true;
      }
      
+     public void scrollByElement(By element) throws InterruptedException, AWTException {
+    	 Robot r = new Robot();
+    	 
+    	 while(!isElementDisplayed(element)) {
+    		 r.keyPress(KeyEvent.VK_DOWN);
+    		 r.keyRelease(KeyEvent.VK_DOWN);
+    		 Thread.sleep(1000);
+    	 }
+     }
      @SuppressWarnings("restriction")
 	public void imageManipulation(String inputImgPath,String outPutImgPath) throws FileNotFoundException, IOException {
     	 File infile = new File(inputImgPath);

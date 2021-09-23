@@ -32,12 +32,14 @@ public class TC_ExpertAdvisory extends BaseClass {
  		extentTest.set(logger);
  		String excelPath = readconfig.getExcelPath();
  		int expertRowCount=XLUtils.getRowCount(excelPath, "FP_Details");
+ 		
  		for( p=1;p<=expertRowCount;p++) {
  		
 		String username = XLUtils.getCellData(excelPath, "Login", p, 0);
 		String pass = XLUtils.getCellData(excelPath, "Login", p, 1);
 		
 		TC_DataGathering_008 tcDG= new TC_DataGathering_008();
+		try {
 		try {
 		tcDG.loginAndStartPlan();}
 		catch(Exception e) {e.printStackTrace();}
@@ -113,6 +115,10 @@ public class TC_ExpertAdvisory extends BaseClass {
 	       element1.click();
 	       logger.pass("clicked on NDA Ok Popup");
 		}
+		}
+		catch(Exception s) {}
+		
+		
 		
 		
 		try {
@@ -156,11 +162,12 @@ public class TC_ExpertAdvisory extends BaseClass {
 		catch(Exception e) {e.printStackTrace();}
 		try {
 		tcDG.generateReport();
+		fun.scrollByElement(fp.agreeFPCheckBox);
 		WebDriverWait wait=new WebDriverWait(driver,15);
 		WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(fp.agreeFPCheckBox));
 		Thread.sleep(5000);
 		element.click();
-		logger.pass("Clicked on CheckBox");
+        logger.pass("Clicked on CheckBox");
         fp.genericClick(driver, fp.proceedButton);
         logger.pass("Clicked on Proceed Button");
         
@@ -177,5 +184,7 @@ public class TC_ExpertAdvisory extends BaseClass {
 		
 		
  		}
+	
+	
  		}
 }

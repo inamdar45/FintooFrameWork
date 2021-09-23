@@ -10,7 +10,7 @@ public class LoginPage {
 
 	public WebDriver driver;
 	public Actions ac;
-   public	By loginLink = By.xpath("//a[text()='Login']");
+   public	By loginLink = By.xpath("/html/body/header/div/div[1]/div[2]/ul/li[6]/a");
 	public By emailMobTextBox = By.id("emailmobile");
 	public By passwordTextBox = By.id("password");
 	public By rememberCheckBox = By.id("rememberMe");

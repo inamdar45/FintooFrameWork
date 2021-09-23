@@ -124,7 +124,7 @@ public class TC_DataGathering_008 extends BaseClass {
 			logger.pass("Pan Entered in Profile " + " " + pan);
 			dG.genericSendKeys(driver, dG.pinCode, pincode);
 			logger.pass("Pincode Entered in Profile is " + " " + pincode);
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			dG.genericClick(driver, dG.camsSubmitButton);
 			logger.pass("Clicked on Profile Submit Button");
 			//Thread.sleep(18000);
@@ -883,7 +883,7 @@ public class TC_DataGathering_008 extends BaseClass {
 				logger.pass("Selected Goal Inflation Rate is" + " " + goalInflationRateText);
 
 				String criticalorNonCritical = data.get("GoalCritical");// datagatheringList.get(72);
-				if (!criticalorNonCritical.contains("Critical")) {
+				if (criticalorNonCritical.contains("Critical")) {
 					dG.genericClick(driver, dG.criticalNonCriticalToggle);
 				}
 				logger.pass("Clicked on Toggle" + " " + criticalorNonCritical);
@@ -922,9 +922,17 @@ public class TC_DataGathering_008 extends BaseClass {
 					}
 
 					String frequencyTxt = data.get("GoalFrequency");// datagatheringList.get(76);
-					By frequencyElement = By.xpath("//label[contains(.,'" + frequencyTxt + "')]");
-					dG.genericClick(driver, frequencyElement);
-					logger.pass("Selected Frequency is" + " " + frequencyTxt);
+					//By frequencyElement = By.xpath("//label[contains(.,'" + frequencyTxt + "')]");
+					//dG.genericClick(driver, frequencyElement);
+					//logger.pass("Selected Frequency is" + " " + frequencyTxt);
+					
+					By freqDropDown = By.xpath("(//span[@role='combobox'])[3]");
+					dG.genericClick(driver, freqDropDown);
+					//String frequencyTxt = data.get("Frequency");
+					By frequencyValue = By.xpath("//div[text()=' "+frequencyTxt+"']");
+					dG.genericClick(driver, frequencyValue);
+					logger.pass("Frequency selected is " + " " + frequencyTxt);
+
 
 				} else {
 
@@ -2159,9 +2167,18 @@ public void uploadAsset(String documentPath01,String documentPassword01,String S
 						dG.genericClick(driver, insTypeElement);
 						logger.pass("Selected Insurance Type is" + insTypeTxt);
 					}
-					By premPayFrequency = By.xpath("//label[text()='" + paymentFrequencyTxt + "']");
-					dG.genericClick(driver, premPayFrequency);
-					logger.pass("Frequency selected is" + paymentFrequencyTxt);
+					
+					By freqDropDown = By.xpath("(//span[@role='combobox'])[2]");
+					dG.genericClick(driver, freqDropDown);
+					//String frequencyTxt = data.get("Frequency");
+					By frequencyValue = By.xpath("//div[text()=' "+paymentFrequencyTxt+"']");
+					dG.genericClick(driver, frequencyValue);
+					logger.pass("Frequency selected is " + " " + paymentFrequencyTxt);
+					
+					
+				//	By premPayFrequency = By.xpath("//label[text()='" + paymentFrequencyTxt + "']");
+				//	dG.genericClick(driver, premPayFrequency);
+				//	logger.pass("Frequency selected is" + paymentFrequencyTxt);
 					dG.genericClick(driver, dG.insurancePurchaseDate);
 					calender01(insurancePurchaseDate);
 					logger.pass("Insurance Purchase date Entered is" + insurancePurchaseDate);
